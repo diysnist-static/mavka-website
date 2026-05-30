@@ -7,6 +7,13 @@
   src: url("FiraCode.ttf") format("truetype");
 }
 :root {
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
   --black-rgb: 0, 0, 0;
   --black-hover-rgb: 10, 10, 10;
   --black-pressed-rgb: 0, 0, 0;
@@ -385,10 +392,18 @@ html.mobile .XDocsPage .XDocsPageContent {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-2xl);
 }
 .XDocsPage .XDocsPageContent h1 {
   text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+.XDocsPage .XDocsPageContent h2, .XDocsPage .XDocsPageContent h3, .XDocsPage .XDocsPageContent h4, .XDocsPage .XDocsPageContent h5, .XDocsPage .XDocsPageContent h6 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+.XDocsPage .XDocsPageContent p {
+  margin-bottom: var(--space-md);
 }
 .XDocsPage .XDocsPageContent .XDocsPageContentBcFw {
   margin-top: 2rem;
@@ -525,10 +540,10 @@ html.mobile .XDocsCodeWrapper {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-lg);
 }
 table th, table td {
-  padding: 0.5rem;
+  padding: var(--space-md);
   border: 1px solid rgb(var(--border-rgb));
 }
 table th {
@@ -571,19 +586,19 @@ table img {
 blockquote {
   background: rgba(var(--blue-rgb), 0.125);
   border-left: 0.25rem solid rgb(var(--blue-rgb));
-  padding: 0.25rem 1rem;
-  margin: 1rem 0;
+  padding: var(--space-xs) var(--space-md);
+  margin: var(--space-md) 0;
 }
 
 hr {
   border: none;
   border-top: 2px dashed rgb(var(--border-rgb));
-  margin: 2rem 0;
+  margin: var(--space-xl) 0;
 }
 hr.table {
   border: none;
   border-top: 1px solid rgb(var(--border-rgb));
-  margin: 0.5rem 0;
+  margin: var(--space-sm) 0;
 }
 
 .XDocsPageNavigationSearch button {
@@ -692,17 +707,17 @@ hr.table {
 
 .XDocsPageContentComments {
   border-top: 2px dashed rgb(var(--border-rgb));
-  margin: 2rem 0;
-  padding-top: 1.5rem;
+  margin: var(--space-xl) 0;
+  padding-top: var(--space-lg);
 }
 
 details + details {
-  margin-top: 1rem;
+  margin-top: var(--space-md);
 }
 
 details {
   border: 1px solid rgb(var(--border-rgb));
-  padding: 1rem;
+  padding: var(--space-md);
 }
 
 summary {
@@ -710,7 +725,7 @@ summary {
 }
 
 li + li {
-  margin-top: 0.5rem;
+  margin-top: var(--space-sm);
 }
 
 /*# sourceMappingURL=%D1%82%D0%B5%D0%BC%D0%B0.css.map */
