@@ -543,7 +543,7 @@ table {
   margin-bottom: var(--space-lg);
 }
 table th, table td {
-  padding: var(--space-md);
+  padding: var(--space-sm);
   border: 1px solid rgb(var(--border-rgb));
 }
 table th {
