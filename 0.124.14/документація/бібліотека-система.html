@@ -550,9 +550,9 @@
     <h1>Система</h1>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">взяти</span> <span class="hljs-keyword">біб</span> система
 
-система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;якийсь.текст&quot;</span>)
+система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>)
 
-<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Текст, <span class="hljs-string">&quot;якийсь.текст&quot;</span>))
+<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Текст, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>))
 </code></div></pre>
 <h2>Записати у файл</h2>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; записує значення у файл</span>
@@ -571,7 +571,7 @@
 
 система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(д, <span class="hljs-string">&quot;якісь.дані&quot;</span>)
 </code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;якийсь.текст&quot;</span>) <span class="hljs-comment">;; запишеться дієкод</span>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>) <span class="hljs-comment">;; запишеться дієкод</span>
 </code></div></pre>
 <h2>Прочитати з файлу</h2>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; читає весь файл</span>
@@ -580,9 +580,9 @@
 <span class="hljs-keyword">дія</span> <span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(тип, куди)
 </code></div></pre>
 <p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">значення = система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Дані, <span class="hljs-string">&quot;якісь.дані&quot;</span>)
+<pre><div class="XDocsCodeWrapper"><code class="hljs">значення = система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Дані, <span class="hljs-string">&quot;./якісь.дані&quot;</span>)
 </code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">значення = система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Текст, <span class="hljs-string">&quot;якийсь.текст&quot;</span>) <span class="hljs-comment">;; прочитається Текст БЕЗ ПЕРЕКОДУВАННЯ</span>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">значення = система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Текст, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>) <span class="hljs-comment">;; прочитається Текст БЕЗ ПЕРЕКОДУВАННЯ</span>
 </code></div></pre>
 <h2>Дописати у файл</h2>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; дописує значення у файл</span>
@@ -599,25 +599,25 @@
 д[<span class="hljs-number">2</span>] = <span class="hljs-number">35</span>
 д[<span class="hljs-number">3</span>] = <span class="hljs-number">36</span>
 
-система.<span class="hljs-title function_">д</span><span class="hljs-title function_">описати</span>(д, <span class="hljs-string">&quot;якісь.дані&quot;</span>)
+система.<span class="hljs-title function_">д</span><span class="hljs-title function_">описати</span>(д, <span class="hljs-string">&quot;./якісь.дані&quot;</span>)
 </code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">д</span><span class="hljs-title function_">описати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;якийсь.текст&quot;</span>) <span class="hljs-comment">;; доповниться дієкод</span>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">д</span><span class="hljs-title function_">описати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>) <span class="hljs-comment">;; доповниться дієкод</span>
 </code></div></pre>
 <h2>Створити папку</h2>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; якщо &quot;шлях&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
 <span class="hljs-keyword">дія</span> <span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(шлях)
 </code></div></pre>
 <p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(<span class="hljs-string">&quot;а&quot;</span>)
+<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(<span class="hljs-string">&quot;./а&quot;</span>)
 </code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(<span class="hljs-string">&quot;а/б/в&quot;</span>)
+<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(<span class="hljs-string">&quot;./а/б/в&quot;</span>)
 </code></div></pre>
 <h2>Видалити файл/папку</h2>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; якщо &quot;шлях&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
 <span class="hljs-keyword">дія</span> <span class="hljs-title function_">в</span><span class="hljs-title function_">идалити</span>(шлях)
 </code></div></pre>
 <p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">в</span><span class="hljs-title function_">идалити</span>(<span class="hljs-string">&quot;якісь.дані&quot;</span>)
+<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">в</span><span class="hljs-title function_">идалити</span>(<span class="hljs-string">&quot;./якісь.дані&quot;</span>)
 </code></div></pre>
 <h2>Виконати команду</h2>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; якщо &quot;команда&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
