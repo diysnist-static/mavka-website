@@ -359,13 +359,6 @@
   Дані
 </a>
 <a
-  href="./ПроміжокЧисел.html"
-  class="XDocsPageNavigationSubmenuItem "
-  data-navigation-item="ПроміжокЧисел"
->
-  ПроміжокЧисел
-</a>
-<a
   href="./Послідовність.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Послідовність"
@@ -531,20 +524,25 @@
   <span class="hljs-comment">;; ...</span>
 <span class="hljs-keyword">кінець</span>
 </code></div></pre>
-<h2><code>чародія_межа</code></h2>
-<p>Дія <code>чародія_межа</code> здійснюється для отримання проміжку.</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">пч = <span class="hljs-number">0</span>..<span class="hljs-number">10</span>
+<!-- ## `чародія_межа`
 
-<span class="hljs-comment">;; те саме що</span>
+Дія `чародія_межа` здійснюється для отримання проміжку.
 
-пч = <span class="hljs-number">0</span>.<span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія_межа</span>(<span class="hljs-number">10</span>)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">пч = <span class="hljs-number">0</span>..=<span class="hljs-number">10</span>
+```мавка
+пч = 0..10
 
-<span class="hljs-comment">;; те саме що</span>
+;; те саме що
 
-пч = <span class="hljs-number">0</span>.<span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія_межа</span>(<span class="hljs-number">10</span>, включно=<span class="hljs-literal">дійсне</span>)
-</code></div></pre>
+пч = 0.чародія_межа(10)
+```
+
+```мавка
+пч = 0..=10
+
+;; те саме що
+
+пч = 0.чародія_межа(10, включно=дійсне)
+``` -->
 <h2><code>чародія_число</code></h2>
 <p>Дія <code>чародія_число</code> здійснюється для перетворення значення на число.</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(<span class="hljs-title function_">Ч</span><span class="hljs-title function_">исло</span>(<span class="hljs-string">&quot;123&quot;</span>))
