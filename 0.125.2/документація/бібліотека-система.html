@@ -563,44 +563,58 @@
 <p>Приклади:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">в</span><span class="hljs-title function_">идалити</span>(<span class="hljs-string">&quot;./якісь.дані&quot;</span>)
 </code></div></pre>
-<h2>Виконати команду</h2>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; якщо &quot;команда&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
-<span class="hljs-comment">;; якщо &quot;команда&quot; є Список в якому міститься Текст, то цей Текст буде перекодовано в юнікод (юнікс, віндовс)</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">в</span><span class="hljs-title function_">иконати</span>(команда)
-</code></div></pre>
-<p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">результат = система.<span class="hljs-title function_">в</span><span class="hljs-title function_">иконати</span>(<span class="hljs-string">&quot;мавка версія&quot;</span>)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">результат = система.<span class="hljs-title function_">в</span><span class="hljs-title function_">иконати</span>([<span class="hljs-string">&quot;мавка&quot;</span>, <span class="hljs-string">&quot;версія&quot;</span>])
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">д = Дані.<span class="hljs-title function_">в</span><span class="hljs-title function_">иділити</span>(<span class="hljs-number">2</span>)
-д[<span class="hljs-number">0</span>] = <span class="hljs-number">108</span>
-д[<span class="hljs-number">1</span>] = <span class="hljs-number">115</span>
+<!-- ## Виконати команду
 
-результат = система.<span class="hljs-title function_">в</span><span class="hljs-title function_">иконати</span>(д)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">д1 = Дані.<span class="hljs-title function_">в</span><span class="hljs-title function_">иділити</span>(<span class="hljs-number">4</span>)
-д1[<span class="hljs-number">0</span>] = <span class="hljs-number">101</span>
-д1[<span class="hljs-number">1</span>] = <span class="hljs-number">99</span>
-д1[<span class="hljs-number">2</span>] = <span class="hljs-number">104</span>
-д1[<span class="hljs-number">3</span>] = <span class="hljs-number">111</span>
-д2 = Дані.<span class="hljs-title function_">в</span><span class="hljs-title function_">иділити</span>(<span class="hljs-number">5</span>)
-д2[<span class="hljs-number">0</span>] = <span class="hljs-number">72</span>
-д2[<span class="hljs-number">1</span>] = <span class="hljs-number">101</span>
-д2[<span class="hljs-number">2</span>] = <span class="hljs-number">108</span>
-д2[<span class="hljs-number">3</span>] = <span class="hljs-number">108</span>
-д2[<span class="hljs-number">4</span>] = <span class="hljs-number">111</span>
+```мавка
+;; якщо "команда" є Текст, його буде перекодовано в юнікод (юнікс, віндовс)
+;; якщо "команда" є Список в якому міститься Текст, то цей Текст буде перекодовано в юнікод (юнікс, віндовс)
+дія виконати(команда)
+```
 
-результат = система.<span class="hljs-title function_">в</span><span class="hljs-title function_">иконати</span>([д1, д2])
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">д1 = Дані.<span class="hljs-title function_">в</span><span class="hljs-title function_">иділити</span>(<span class="hljs-number">4</span>)
-д1[<span class="hljs-number">0</span>] = <span class="hljs-number">101</span>
-д1[<span class="hljs-number">1</span>] = <span class="hljs-number">99</span>
-д1[<span class="hljs-number">2</span>] = <span class="hljs-number">104</span>
-д1[<span class="hljs-number">3</span>] = <span class="hljs-number">111</span>
+Приклади:
 
-результат = система.<span class="hljs-title function_">в</span><span class="hljs-title function_">иконати</span>([д1, <span class="hljs-string">&quot;привіт&quot;</span>])
-</code></div></pre>
+```мавка
+результат = система.виконати("мавка версія")
+```
+
+```мавка
+результат = система.виконати(["мавка", "версія"])
+```
+
+```мавка
+д = Дані.виділити(2)
+д[0] = 108
+д[1] = 115
+
+результат = система.виконати(д)
+```
+
+```мавка
+д1 = Дані.виділити(4)
+д1[0] = 101
+д1[1] = 99
+д1[2] = 104
+д1[3] = 111
+д2 = Дані.виділити(5)
+д2[0] = 72
+д2[1] = 101
+д2[2] = 108
+д2[3] = 108
+д2[4] = 111
+
+результат = система.виконати([д1, д2])
+```
+
+
+```мавка
+д1 = Дані.виділити(4)
+д1[0] = 101
+д1[1] = 99
+д1[2] = 104
+д1[3] = 111
+
+результат = система.виконати([д1, "привіт"])
+``` -->
 
     
     <div class="XDocsPageContentBcFw">
