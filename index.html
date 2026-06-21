@@ -25,7 +25,7 @@
     />
 
     <link rel="stylesheet" href="./ресурси/highlight-atom-one-dark.css" />
-    <link rel="stylesheet" href="./ресурси/мавка.css?мч=1781989575" />
+    <link rel="stylesheet" href="./ресурси/мавка.css?мч=1782080615" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,17 +66,17 @@
         <a href="" class="MavkaNavigationLogo">
           <img src="./ресурси/мавка.лого.svg" alt="" />
           <span class="MavkaNavigationLogoText">Мавка</span>
-          <span class="MavkaNavigationLogoVersion">0.125.2</span>
+          <span class="MavkaNavigationLogoVersion">0.125.3</span>
         </a>
         <div class="MavkaNavigationLinks">
-          <a href="https://код.мавка.укр/мавка-0.125.2/index.html" class="MavkaNavigationLink">
+          <a href="https://код.мавка.укр/мавка-0.125.3/index.html" class="MavkaNavigationLink">
             <div class="MavkaNavigationLinkIcon">
               <img src="./ресурси/код.лого.svg" alt="" />
             </div>
             Код
           </a>
           <a
-            href="./0.125.2/документація/index.html"
+            href="./0.125.3/документація/index.html"
             class="MavkaNavigationLink"
           >
             <div class="MavkaNavigationLinkIcon">
@@ -198,7 +198,7 @@
 
       <div class="MavkaNavigationMobileMenu" data-hidden="true">
         <a
-          href="./0.125.2/документація/index.html"
+          href="./0.125.3/документація/index.html"
           class="MavkaNavigationMobileMenuItem"
         >
           <img
@@ -209,7 +209,7 @@
           <span class="MavkaNavigationMobileMenuItemName">Документація</span>
         </a>
         <a
-          href="https://код.мавка.укр/мавка-0.125.2/index.html"
+          href="https://код.мавка.укр/мавка-0.125.3/index.html"
           class="MavkaNavigationMobileMenuItem"
         >
           <img
@@ -246,7 +246,7 @@
 
         <div class="MavkaNavigationMobileMenuFooter">
           <img src="./ресурси/мавка.лого.svg" alt="" />
-          Мавка 0.125.2
+          Мавка 0.125.3
           <button
             data-navigation-light-toggle="true"
             class="MavkaNavigationMobileMenuFooterConfigButton"
@@ -330,7 +330,7 @@
           </h5>
           <div class="MavkaHomeHeroButtons">
             <a
-              href="./архів/випуск-мавки-0.125.2.html"
+              href="./архів/випуск-мавки-0.125.3.html"
               class="MavkaHomeHeroButton black"
             >
               Завантажити
@@ -414,7 +414,7 @@
 <span class="hljs-keyword">кінець</span>
 
 реакція = <span class="hljs-title class_">Р</span><span class="hljs-title class_">акета</span>(назва=<span
-              class="hljs-string">"Нікія"</span>,
+              class="hljs-string">"Вікторія"</span>,
                  швидкість=<span class="hljs-number">299792458</span>,
                  маса=<span class="hljs-literal">недійсне</span>)
 
@@ -453,7 +453,7 @@
 
               <div class="MavkaHomeHeroCodeBlockButtons">
                 <a
-                  href="./архів/випуск-мавки-0.125.2.html"
+                  href="./архів/випуск-мавки-0.125.3.html"
                   class="MavkaHomeHeroCodeBlockButton"
                 >
                   <svg
@@ -564,7 +564,8 @@
           <div class="MavkaHomeFeatureIcon">🤤</div>
           <div class="MavkaHomeFeatureName">Швидка</div>
           <div class="MavkaHomeFeatureDescription">
-            Залежно від машини, виконання Мавки може бути досить швидким.
+            Залежно від виконувача, виконання Мавки може бути досить швидким.
+            <span data-tooltip="Мавка націлена на те, щоб бути на стільки швидкою, на скільки це можливо. Але найперше Мавка має бути зручною." class="MavkaHomeFeatureDescriptionInfo">&#128712;</span>
           </div>
         </div>
         <div class="MavkaHomeFeature">
@@ -646,7 +647,7 @@
       </section>
     </div>
 
-    <script src="./ресурси/мавка.js?v=0.125.2__0"></script>
+    <script src="./ресурси/мавка.js?v=0.125.3__0"></script>
     <script>
       window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
@@ -667,6 +668,61 @@
             el.classList.add('anim');
           });
         }, 250)
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        let tooltipBox = null;
+
+        document.addEventListener('mouseover', (e) => {
+          const target = e.target.closest('[data-tooltip]');
+          if (!target) return;
+
+          if (!tooltipBox) {
+            tooltipBox = document.createElement('div');
+            tooltipBox.className = 'MavkaHomeTooltip';
+            document.body.appendChild(tooltipBox);
+          }
+
+          tooltipBox.textContent = target.getAttribute('data-tooltip');
+
+          const padding = 16;
+          const maxTooltipWidth = 300;
+          const availableScreenWidth = window.innerWidth - (padding * 2);
+
+          tooltipBox.style.maxWidth = `${Math.min(maxTooltipWidth, availableScreenWidth)}px`;
+
+          tooltipBox.classList.add('visible');
+
+          const targetRect = target.getBoundingClientRect();
+          const tooltipWidth = tooltipBox.offsetWidth;
+          const tooltipHeight = tooltipBox.offsetHeight;
+          const spacing = 8;
+
+          let top = targetRect.top - tooltipHeight - spacing;
+          let left = targetRect.left + (targetRect.width / 2) - (tooltipWidth / 2);
+
+          if (top < padding) {
+            top = targetRect.bottom + spacing;
+          }
+
+          if (left < padding) {
+            left = padding;
+          }
+          const rightEdge = window.innerWidth - tooltipWidth - padding;
+          if (left > rightEdge) {
+            left = rightEdge;
+          }
+
+          tooltipBox.style.top = `${top + window.scrollY}px`;
+          tooltipBox.style.left = `${left + window.scrollX}px`;
+        });
+
+        document.addEventListener('mouseout', (e) => {
+          const target = e.target.closest('[data-tooltip]');
+          if (!target || !tooltipBox) return;
+
+          tooltipBox.classList.remove('visible');
+        });
       });
     </script>
   </body>
