@@ -509,21 +509,24 @@
   <span class="hljs-keyword">вернути</span> а + б
 <span class="hljs-keyword">кінець</span>
 </code></div></pre>
-<p>Також можна створити дію без параметрів та/або без результату:</p>
+<p>Вказівка <code>вернути</code> в кінці не є обовʼязковою і додається автоматично:</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> <span class="hljs-title function_">д</span><span class="hljs-title function_">одати</span>(а, б)
+  а + б
+<span class="hljs-keyword">кінець</span>
+
+<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(<span class="hljs-title function_">д</span><span class="hljs-title function_">одати</span>(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)) <span class="hljs-comment">;; 4</span>
+</code></div></pre>
+<blockquote>
+<p>Вказівка <code>вернути</code> дозволяє закінчити поточну діяльність і повернутись (з результатом або без) до місця, де діяльність почато.</p>
+</blockquote>
+<p>Також можна створити дію без параметрів:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> <span class="hljs-title function_">п</span><span class="hljs-title function_">ривіт</span>()
   <span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(<span class="hljs-string">&quot;Привіт!&quot;</span>)
-<span class="hljs-keyword">кінець</span>
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> <span class="hljs-title function_">п</span><span class="hljs-title function_">ривіт</span>(імʼя)
-  <span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(<span class="hljs-string">&quot;<span class="hljs-subst">%(імʼя)</span> вітає!&quot;</span>)
 <span class="hljs-keyword">кінець</span>
 </code></div></pre>
 <p>Існує також короткий запис створення дії:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span>(а, б): а + б
 </code></div></pre>
-<blockquote>
-<p>Операція <code>вернути</code> дозволяє перервати поточну діяльність і повернутись (з результатом або без) до місця, де діяльність почато.</p>
-</blockquote>
 
     
     <div class="XDocsPageContentBcFw">
