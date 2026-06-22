@@ -505,6 +505,12 @@
 <p>Або:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs">а <span class="hljs-keyword">або</span> б <span class="hljs-comment">;; перевіряє чи значення &quot;а&quot; або значення &quot;б&quot; є дійсним</span>
 </code></div></pre>
+<p>Якщо значення <code>або</code> ліворуч є дійсним, тоді значення праворуч не буде здійсненим:</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> <span class="hljs-title function_">а</span>(): <span class="hljs-literal">дійсне</span>
+<span class="hljs-keyword">дія</span> <span class="hljs-title function_">б</span>(): <span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(<span class="hljs-string">&quot;привіт&quot;</span>)
+
+<span class="hljs-title function_">а</span>() <span class="hljs-keyword">або</span> <span class="hljs-title function_">б</span>() <span class="hljs-comment">;; &quot;привіт&quot; не буде виведено</span>
+</code></div></pre>
 <p>Не:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">не</span> а <span class="hljs-comment">;; перевіряє чи значення &quot;а&quot; не є дійсним</span>
 </code></div></pre>
