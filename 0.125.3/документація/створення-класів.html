@@ -500,50 +500,35 @@
     
     <h1>Створення класів</h1>
 <p>Записати створення класу можна так:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Паспорт
-  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія</span>(номер, дата_видачі, прізвище, імʼя, по_батькові, стать)
-    <span class="hljs-keyword">я</span>.номер = номер
-    <span class="hljs-keyword">я</span>.дата_видачі = дата_видачі
-    <span class="hljs-keyword">я</span>.прізвище = прізвище
-    <span class="hljs-keyword">я</span>.імʼя = імʼя
-    <span class="hljs-keyword">я</span>.по_батькові = по_батькові
-    <span class="hljs-keyword">я</span>.стать = стать
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Планета
+  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія</span>(назва, маса, радіус)
+    <span class="hljs-keyword">я</span>.назва = назва
+    <span class="hljs-keyword">я</span>.маса = маса <span class="hljs-comment">;; кілограми</span>
+    <span class="hljs-keyword">я</span>.радіус = радіус  <span class="hljs-comment">;; метри</span>
+
+    <span class="hljs-keyword">я</span>.г = <span class="hljs-number">6.6743е-11</span> * (маса / (радіус * радіус))
   <span class="hljs-keyword">кінець</span>
 
-  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">П</span><span class="hljs-title function_">ІБ</span>()
-    <span class="hljs-string">&quot;<span class="hljs-subst">%(я.прізвище)</span> <span class="hljs-subst">%(я.імʼя)</span> <span class="hljs-subst">%(я.по_батькові)</span>&quot;</span>
-  <span class="hljs-keyword">кінець</span>
-
-  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">з</span><span class="hljs-title function_">мінити_імʼя</span>(нове_імʼя)
-    <span class="hljs-keyword">я</span>.імʼя = нове_імʼя
+  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">с</span><span class="hljs-title function_">ила_тяжіння</span>(м)
+    м * <span class="hljs-keyword">я</span>.г
   <span class="hljs-keyword">кінець</span>
 <span class="hljs-keyword">кінець</span>
 
-мій_паспорт = <span class="hljs-title function_">П</span><span class="hljs-title function_">аспорт</span>(
-  номер=<span class="hljs-number">0</span>,
-  дата_видачі=<span class="hljs-string">&quot;00.00.0000&quot;</span>,
-  прізвище=<span class="hljs-string">&quot;Когут&quot;</span>,
-  імʼя=<span class="hljs-string">&quot;Давід&quot;</span>,
-  по_батькові=<span class="hljs-string">&quot;Богданович&quot;</span>,
-  стать=<span class="hljs-string">&quot;чоловік&quot;</span>
+земля = <span class="hljs-title function_">П</span><span class="hljs-title function_">ланета</span>(
+  назва=<span class="hljs-string">&quot;Земля&quot;</span>,
+  маса=<span class="hljs-number">5.972е24</span>,
+  радіус=<span class="hljs-number">6371000</span>,
 )
 
-<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(мій_паспорт)
-
-мій_паспорт.<span class="hljs-title function_">з</span><span class="hljs-title function_">мінити_імʼя</span>(<span class="hljs-string">&quot;Давид&quot;</span>)
-
-<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(мій_паспорт.<span class="hljs-title function_">П</span><span class="hljs-title function_">ІБ</span>())
+<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(земля.<span class="hljs-title function_">с</span><span class="hljs-title function_">ила_тяжіння</span>(<span class="hljs-number">65</span>))
 </code></div></pre>
 <p>Наперед можна визначити ознаки предметів цього класу:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Паспорт
-  номер
-  дата_видачі
-  прізвище
-  імʼя
-  по_батькові
-  стать
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Планета
+  назва
+  маса
+  радіус
 
-  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія</span>(номер, дата_видачі, прізвище, імʼя, по_батькові, стать)
+  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія</span>(назва, маса, радіус)
     <span class="hljs-comment">;; ...</span>
   <span class="hljs-keyword">кінець</span>
 
@@ -551,45 +536,53 @@
 <span class="hljs-keyword">кінець</span>
 </code></div></pre>
 <p>Метод <code>чародія</code> не є обовʼзяковим:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Паспорт
-  номер
-  дата_видачі
-  прізвище
-  імʼя
-  по_батькові
-  стать
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Планета
+  назва
+  маса
+  радіус
 
-  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">П</span><span class="hljs-title function_">ІБ</span>()
-    <span class="hljs-string">&quot;<span class="hljs-subst">%(я.прізвище)</span> <span class="hljs-subst">%(я.імʼя)</span> <span class="hljs-subst">%(я.по_батькові)</span>&quot;</span>
+  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">г</span>()
+    <span class="hljs-number">6.6743е-11</span> * (<span class="hljs-keyword">я</span>.маса / (<span class="hljs-keyword">я</span>.радіус * <span class="hljs-keyword">я</span>.радіус))
   <span class="hljs-keyword">кінець</span>
 
-  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">з</span><span class="hljs-title function_">мінити_імʼя</span>(нове_імʼя)
-    <span class="hljs-keyword">я</span>.імʼя = нове_імʼя
+  <span class="hljs-keyword">дія</span> <span class="hljs-title function_">с</span><span class="hljs-title function_">ила_тяжіння</span>(м)
+    м * <span class="hljs-keyword">я</span>.<span class="hljs-title function_">г</span>()
   <span class="hljs-keyword">кінець</span>
 <span class="hljs-keyword">кінець</span>
 
-мій_паспорт = <span class="hljs-title function_">П</span><span class="hljs-title function_">аспорт</span>(
-  номер=<span class="hljs-number">0</span>,
-  дата_видачі=<span class="hljs-string">&quot;00.00.0000&quot;</span>,
-  прізвище=<span class="hljs-string">&quot;Когут&quot;</span>,
-  імʼя=<span class="hljs-string">&quot;Давід&quot;</span>,
-  по_батькові=<span class="hljs-string">&quot;Богданович&quot;</span>,
-  стать=<span class="hljs-string">&quot;чоловік&quot;</span>
+земля = <span class="hljs-title function_">П</span><span class="hljs-title function_">ланета</span>(
+  назва=<span class="hljs-string">&quot;Земля&quot;</span>,
+  маса=<span class="hljs-number">5.972е24</span>,
+  радіус=<span class="hljs-number">6371000</span>,
 )
 
-<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(мій_паспорт)
-
-мій_паспорт.<span class="hljs-title function_">з</span><span class="hljs-title function_">мінити_імʼя</span>(<span class="hljs-string">&quot;Давид&quot;</span>)
-
-<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(мій_паспорт.<span class="hljs-title function_">П</span><span class="hljs-title function_">ІБ</span>())
+<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(земля.<span class="hljs-title function_">с</span><span class="hljs-title function_">ила_тяжіння</span>(<span class="hljs-number">65</span>))
 </code></div></pre>
 <p>Методи класу можна доповнювати вже до створеного класу:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> Паспорт.<span class="hljs-title function_">П</span><span class="hljs-title function_">ІБ</span>()
-  <span class="hljs-string">&quot;<span class="hljs-subst">%(я.прізвище)</span> <span class="hljs-subst">%(я.імʼя)</span> <span class="hljs-subst">%(я.по_батькові)</span>&quot;</span>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Планета
+  назва
+  маса
+  радіус
 <span class="hljs-keyword">кінець</span>
+
+земля = <span class="hljs-title function_">П</span><span class="hljs-title function_">ланета</span>(
+  назва=<span class="hljs-string">&quot;Земля&quot;</span>,
+  маса=<span class="hljs-number">5.972е24</span>,
+  радіус=<span class="hljs-number">6371000</span>,
+)
+
+<span class="hljs-keyword">дія</span> Планета.<span class="hljs-title function_">г</span>()
+  <span class="hljs-number">6.6743е-11</span> * (<span class="hljs-keyword">я</span>.маса / (<span class="hljs-keyword">я</span>.радіус * <span class="hljs-keyword">я</span>.радіус))
+<span class="hljs-keyword">кінець</span>
+
+<span class="hljs-keyword">дія</span> Планета.<span class="hljs-title function_">с</span><span class="hljs-title function_">ила_тяжіння</span>(м)
+  м * <span class="hljs-keyword">я</span>.<span class="hljs-title function_">г</span>()
+<span class="hljs-keyword">кінець</span>
+
+<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(земля.<span class="hljs-title function_">с</span><span class="hljs-title function_">ила_тяжіння</span>(<span class="hljs-number">65</span>))
 </code></div></pre>
 <p>Щоб перевірити чи предмет є певного класу, можна використати операцію <code>є</code>:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(мій_паспорт <span class="hljs-keyword">є</span> Паспорт) <span class="hljs-comment">;; дійсне</span>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(земля <span class="hljs-keyword">є</span> Планета) <span class="hljs-comment">;; дійсне</span>
 </code></div></pre>
 <!-- ---
 
