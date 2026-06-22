@@ -11,7 +11,7 @@
 
   <meta name="description" content="Як призначити в Мавці">
 
-  <title>Призначення діячів | Документація Мавки 0.125.3</title>
+  <title>Призначення | Документація Мавки 0.125.3</title>
 
   <link rel="icon" type="image/png" href="./ресурси/тема/документація.лого.png" />
   <link rel="icon" sizes="any" type="image/svg+xml" href="./ресурси/тема/документація.лого.svg">
@@ -72,11 +72,11 @@
   Перша програма
 </a>
 <a
-  href="./призначення-діячів.html"
+  href="./призначення.html"
   class="XDocsPageNavigationSubmenuItem active"
-  data-navigation-item="Призначення діячів"
+  data-navigation-item="Призначення"
 >
-  Призначення діячів
+  Призначення
 </a>
 <a
   href="./створення-дій.html"
@@ -498,7 +498,7 @@
   </button>
   <div class="XDocsPageContent">
     
-    <h1>Призначення діячів</h1>
+    <h1>Призначення</h1>
 <p>Вручну призначити в Мавці можна використовуючи знак <code>=</code>:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs">кіт_моєї_сестри = <span class="hljs-title function_">К</span><span class="hljs-title function_">іт</span>(<span class="hljs-string">&quot;Тимофій&quot;</span>)
 </code></div></pre>
@@ -509,22 +509,22 @@
 шс = <span class="hljs-number">299792458</span>
 Е = м * шс ** <span class="hljs-number">2</span>
 </code></div></pre>
-<p>Звернутись до діяча можна з поточної дійсності або із зовнішньої:</p>
+<p>Звернутись до призначеного можна з поточної дійсності або із зовнішньої:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs">а = <span class="hljs-number">2</span>
 
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">ф</span>()
+д = <span class="hljs-keyword">дія</span>()
   б = <span class="hljs-number">3</span>
 
   <span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(а) <span class="hljs-comment">;; 2</span>
 <span class="hljs-keyword">кінець</span>
 
-<span class="hljs-title function_">ф</span>()
+<span class="hljs-title function_">д</span>()
 
 <span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(а) <span class="hljs-comment">;; 2</span>
 
 <span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(б) <span class="hljs-comment">;; помилка</span>
 </code></div></pre>
-<p>Існують також допоміжні оператори <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>**=</code> що
+<p>Існують також допоміжні дії <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>**=</code> що
 дозволяють простіше призначити в поточній дійсності із застосуванням до значення арифметичних дій:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs">а = <span class="hljs-number">2</span>
 
