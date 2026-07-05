@@ -9,9 +9,9 @@
 
   
 
-  <meta name="description" content="Доступ до системних функцій з Бібліотекою Мавки">
+  <meta name="description" content="Текст використовує Дієкод.">
 
-  <title>Система | Документація Мавки 0.126.0</title>
+  <title>Текст | Документація Мавки 0.126.1</title>
 
   <link rel="icon" type="image/png" href="./ресурси/тема/документація.лого.png" />
   <link rel="icon" sizes="any" type="image/svg+xml" href="./ресурси/тема/документація.лого.svg">
@@ -273,7 +273,7 @@
   class="XDocsPageNavigationItem"
   data-navigation-item="Глобальні"
   data-navigation-item-expanded-name=""
-  data-navigation-item-expanded="false"
+  data-navigation-item-expanded="true"
 >
   <span class="XDocsPageNavigationItemName"
     >Глобальні</span
@@ -293,7 +293,7 @@
 <div
   class="XDocsPageNavigationSubmenu"
   data-navigation-submenu="Глобальні"
-  data-navigation-submenu-shown="false"
+  data-navigation-submenu-shown="true"
 >
   <a
   href="./дійсне.html"
@@ -325,7 +325,7 @@
 </a>
 <a
   href="./Текст.html"
-  class="XDocsPageNavigationSubmenuItem "
+  class="XDocsPageNavigationSubmenuItem active"
   data-navigation-item="Текст"
 >
   Текст
@@ -406,7 +406,7 @@
   class="XDocsPageNavigationItem"
   data-navigation-item="Бібліотека"
   data-navigation-item-expanded-name=""
-  data-navigation-item-expanded="true"
+  data-navigation-item-expanded="false"
 >
   <span class="XDocsPageNavigationItemName"
     >Бібліотека</span
@@ -426,21 +426,28 @@
 <div
   class="XDocsPageNavigationSubmenu"
   data-navigation-submenu="Бібліотека"
-  data-navigation-submenu-shown="true"
+  data-navigation-submenu-shown="false"
 >
   <a
+  href="./бібліотека-математика.html"
+  class="XDocsPageNavigationSubmenuItem "
+  data-navigation-item="Математика"
+>
+  Математика
+</a>
+<a
+  href="./бібліотека-файлова-система.html"
+  class="XDocsPageNavigationSubmenuItem "
+  data-navigation-item="Файлова система"
+>
+  Файлова система
+</a>
+<a
   href="./бібліотека-читати.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Читати"
 >
   Читати
-</a>
-<a
-  href="./бібліотека-система.html"
-  class="XDocsPageNavigationSubmenuItem active"
-  data-navigation-item="Система"
->
-  Система
 </a>
 </div>
 
@@ -489,7 +496,7 @@
 <div class="XDocsPageNavigationFooterWrapper">
   <div class="XDocsPageNavigationFooter">
     <a href="https://мавка.укр"><img src="./ресурси/тема/мавка.лого.svg" alt=""></a>
-    <a href="https://мавка.укр" style="all: unset; cursor: pointer; margin-right: 0.4ch;">Мавка</a>0.126.0
+    <a href="https://мавка.укр" style="all: unset; cursor: pointer; margin-right: 0.4ch;">Мавка</a>0.126.1
   </div>
 </div>
 </div>
@@ -505,135 +512,29 @@
   </button>
   <div class="XDocsPageContent">
     
-    <h1>Система</h1>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">взяти</span> <span class="hljs-keyword">біб</span> система
-
-система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>)
-
-<span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Текст, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>))
+    <h1>Текст</h1>
+<p><code>Текст</code> використовує <a href="./%D0%B4%D1%96%D1%94%D0%BA%D0%BE%D0%B4.html">Дієкод</a>.</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">клас</span> Текст
+  розмір
+<span class="hljs-keyword">кінець</span>
 </code></div></pre>
-<h2>Записати у файл</h2>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; записує значення у файл</span>
-<span class="hljs-comment">;; якщо &quot;значення&quot; є Текст, перекодування в юнікод НЕ БУДЕ</span>
-<span class="hljs-comment">;;                          тобто у файл запишеться дієкод</span>
-<span class="hljs-comment">;; якщо &quot;значення&quot; є Дані, буде записано без змін</span>
-<span class="hljs-comment">;; якщо &quot;куди&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(значення, куди)
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> Текст.<span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія_число</span>()
 </code></div></pre>
-<p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">д = Дані.<span class="hljs-title function_">в</span><span class="hljs-title function_">иділити</span>(<span class="hljs-number">4</span>)
-д[<span class="hljs-number">0</span>] = <span class="hljs-number">33</span>
-д[<span class="hljs-number">1</span>] = <span class="hljs-number">34</span>
-д[<span class="hljs-number">2</span>] = <span class="hljs-number">35</span>
-д[<span class="hljs-number">3</span>] = <span class="hljs-number">36</span>
-
-система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(д, <span class="hljs-string">&quot;якісь.дані&quot;</span>)
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> Текст.<span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія_текст</span>()
 </code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">з</span><span class="hljs-title function_">аписати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>) <span class="hljs-comment">;; запишеться дієкод</span>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> Текст.<span class="hljs-title function_">ч</span><span class="hljs-title function_">ародія_перебір</span>()
 </code></div></pre>
-<h2>Прочитати з файлу</h2>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; читає весь файл</span>
-<span class="hljs-comment">;; якщо &quot;тип&quot; == Текст, прочитане значення буде вернуто як текст БЕЗ ПЕРЕКОДУВАННЯ</span>
-<span class="hljs-comment">;; якщо &quot;куди&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(тип, куди)
+<pre><div class="XDocsCodeWrapper"><code class="hljs">Текст.Перебір <span class="hljs-comment">;; клас перебору тексту</span>
 </code></div></pre>
-<p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">значення = система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Дані, <span class="hljs-string">&quot;./якісь.дані&quot;</span>)
+<hr>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; перетворити предмет на текст</span>
+т = <span class="hljs-title function_">Т</span><span class="hljs-title function_">екст</span>(<span class="hljs-number">123</span>)
 </code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">значення = система.<span class="hljs-title function_">п</span><span class="hljs-title function_">рочитати</span>(Текст, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>) <span class="hljs-comment">;; прочитається Текст БЕЗ ПЕРЕКОДУВАННЯ</span>
-</code></div></pre>
-<h2>Дописати у файл</h2>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; дописує значення у файл</span>
-<span class="hljs-comment">;; якщо &quot;значення&quot; є Текст, перекодування в юнікод НЕ БУДЕ</span>
-<span class="hljs-comment">;;                          тобто у файл запишеться дієкод</span>
-<span class="hljs-comment">;; якщо &quot;значення&quot; є Дані, буде дописано без змін</span>
-<span class="hljs-comment">;; якщо &quot;куди&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">д</span><span class="hljs-title function_">описати</span>(значення, куди)
-</code></div></pre>
-<p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">д = Дані.<span class="hljs-title function_">в</span><span class="hljs-title function_">иділити</span>(<span class="hljs-number">4</span>)
-д[<span class="hljs-number">0</span>] = <span class="hljs-number">33</span>
-д[<span class="hljs-number">1</span>] = <span class="hljs-number">34</span>
-д[<span class="hljs-number">2</span>] = <span class="hljs-number">35</span>
-д[<span class="hljs-number">3</span>] = <span class="hljs-number">36</span>
-
-система.<span class="hljs-title function_">д</span><span class="hljs-title function_">описати</span>(д, <span class="hljs-string">&quot;./якісь.дані&quot;</span>)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">д</span><span class="hljs-title function_">описати</span>(<span class="hljs-string">&quot;привітики&quot;</span>, <span class="hljs-string">&quot;./якийсь.текст&quot;</span>) <span class="hljs-comment">;; доповниться дієкод</span>
-</code></div></pre>
-<h2>Створити папку</h2>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; якщо &quot;шлях&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(шлях)
-</code></div></pre>
-<p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(<span class="hljs-string">&quot;./а&quot;</span>)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">с</span><span class="hljs-title function_">творити_папку</span>(<span class="hljs-string">&quot;./а/б/в&quot;</span>)
-</code></div></pre>
-<h2>Видалити файл/папку</h2>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; якщо &quot;шлях&quot; є Текст, його буде перекодовано в юнікод (юнікс, віндовс)</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">в</span><span class="hljs-title function_">идалити</span>(шлях)
-</code></div></pre>
-<p>Приклади:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">система.<span class="hljs-title function_">в</span><span class="hljs-title function_">идалити</span>(<span class="hljs-string">&quot;./якісь.дані&quot;</span>)
-</code></div></pre>
-<!-- ## Виконати команду
-
-```мавка
-;; якщо "команда" є Текст, його буде перекодовано в юнікод (юнікс, віндовс)
-;; якщо "команда" є Список в якому міститься Текст, то цей Текст буде перекодовано в юнікод (юнікс, віндовс)
-дія виконати(команда)
-```
-
-Приклади:
-
-```мавка
-результат = система.виконати("мавка версія")
-```
-
-```мавка
-результат = система.виконати(["мавка", "версія"])
-```
-
-```мавка
-д = Дані.виділити(2)
-д[0] = 108
-д[1] = 115
-
-результат = система.виконати(д)
-```
-
-```мавка
-д1 = Дані.виділити(4)
-д1[0] = 101
-д1[1] = 99
-д1[2] = 104
-д1[3] = 111
-д2 = Дані.виділити(5)
-д2[0] = 72
-д2[1] = 101
-д2[2] = 108
-д2[3] = 108
-д2[4] = 111
-
-результат = система.виконати([д1, д2])
-```
-
-
-```мавка
-д1 = Дані.виділити(4)
-д1[0] = 101
-д1[1] = 99
-д1[2] = 104
-д1[3] = 111
-
-результат = система.виконати([д1, "привіт"])
-``` -->
 
     
     <div class="XDocsPageContentBcFw">
-      <a data-is-prev="true" href="./бібліотека-читати.html">Відступ</a>
-      <a data-is-next="true" href="./подяка.html">Наступ</a >
+      <a data-is-prev="true" href="./Число.html">Відступ</a>
+      <a data-is-next="true" href="./Дія.html">Наступ</a >
     </div>
     
   </div>
