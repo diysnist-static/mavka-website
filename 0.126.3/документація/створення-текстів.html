@@ -9,9 +9,9 @@
 
   
 
-  <meta name="description" content="Математичні константи і дії в Мавці">
+  <meta name="description" content="Як створити текст в Мавці">
 
-  <title>Математика | Документація Мавки 0.126.2</title>
+  <title>Створення текстів | Документація Мавки 0.126.3</title>
 
   <link rel="icon" type="image/png" href="./ресурси/тема/документація.лого.png" />
   <link rel="icon" sizes="any" type="image/svg+xml" href="./ресурси/тема/документація.лого.svg">
@@ -42,7 +42,7 @@
   class="XDocsPageNavigationItem"
   data-navigation-item="Мова"
   data-navigation-item-expanded-name=""
-  data-navigation-item-expanded="false"
+  data-navigation-item-expanded="true"
 >
   <span class="XDocsPageNavigationItemName"
     >Мова</span
@@ -62,7 +62,7 @@
 <div
   class="XDocsPageNavigationSubmenu"
   data-navigation-submenu="Мова"
-  data-navigation-submenu-shown="false"
+  data-navigation-submenu-shown="true"
 >
   <a
   href="./перша-програма.html"
@@ -150,7 +150,7 @@
 </a>
 <a
   href="./створення-текстів.html"
-  class="XDocsPageNavigationSubmenuItem "
+  class="XDocsPageNavigationSubmenuItem active"
   data-navigation-item="Створення текстів"
 >
   Створення текстів
@@ -406,7 +406,7 @@
   class="XDocsPageNavigationItem"
   data-navigation-item="Бібліотека"
   data-navigation-item-expanded-name=""
-  data-navigation-item-expanded="true"
+  data-navigation-item-expanded="false"
 >
   <span class="XDocsPageNavigationItemName"
     >Бібліотека</span
@@ -426,28 +426,28 @@
 <div
   class="XDocsPageNavigationSubmenu"
   data-navigation-submenu="Бібліотека"
-  data-navigation-submenu-shown="true"
+  data-navigation-submenu-shown="false"
 >
   <a
-  href="./бібліотека-математика.html"
-  class="XDocsPageNavigationSubmenuItem active"
-  data-navigation-item="Математика"
+  href="./біб-мат.html"
+  class="XDocsPageNavigationSubmenuItem "
+  data-navigation-item="мат"
 >
-  Математика
+  мат
 </a>
 <a
-  href="./бібліотека-файлова-система.html"
+  href="./біб-афс.html"
   class="XDocsPageNavigationSubmenuItem "
-  data-navigation-item="Файлова система"
+  data-navigation-item="афс"
 >
-  Файлова система
+  афс
 </a>
 <a
-  href="./бібліотека-читати.html"
+  href="./біб-аввід.html"
   class="XDocsPageNavigationSubmenuItem "
-  data-navigation-item="Читати"
+  data-navigation-item="аввід"
 >
-  Читати
+  аввід
 </a>
 </div>
 
@@ -496,7 +496,7 @@
 <div class="XDocsPageNavigationFooterWrapper">
   <div class="XDocsPageNavigationFooter">
     <a href="https://мавка.укр"><img src="./ресурси/тема/мавка.лого.svg" alt=""></a>
-    <a href="https://мавка.укр" style="all: unset; cursor: pointer; margin-right: 0.4ch;">Мавка</a>0.126.2
+    <a href="https://мавка.укр" style="all: unset; cursor: pointer; margin-right: 0.4ch;">Мавка</a>0.126.3
   </div>
 </div>
 </div>
@@ -512,67 +512,43 @@
   </button>
   <div class="XDocsPageContent">
     
-    <h1>Математика</h1>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">взяти</span> <span class="hljs-keyword">біб</span> мат
+    <h1>Створення текстів</h1>
+<p>Записати створення тексту в Мавці можна так:</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-string">&quot;Стій, серце, стій! не бийся так шалено.&quot;</span>
 </code></div></pre>
-<p>Константи:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">Е
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-string">&quot;&quot;&quot;В небі місяць зіходить смутний,
+Поміж хмарами вид свій ховає,
+Його промінь червоний, сумний
+Поза хмарами світить-палає.
+
+Мов пожежа на небі горить,
+Землю ж темнії тіні вкривають,
+Ледве промінь прорветься на мить,
+Знову хмари, мов дим, застилають.
+
+Крізь темноту самотно зорить
+Одинокая зірка ясная,
+Її промінь так гордо горить,
+Не страшна їй темнота нічная!
+
+Гордий промінь в тієї зорі,
+Та в нім туга палає огниста,
+І сіяє та зірка вгорі,
+Мов велика сльоза промениста.
+
+Чи над людьми та зірка сумна
+Променистими слізьми ридає?
+Чи того, що самотна вона
+По безмірнім просторі блукає?..&quot;&quot;&quot;</span>
 </code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">ЛОГ10
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">ЛОГ2
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">ЛОГ2Е
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">ЛОГ10Е
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">ПІ
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">КОРІНЬ1_2
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">КОРІНЬ2
-</code></div></pre>
-<p>Дії:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція синус для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">с</span><span class="hljs-title function_">ин</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція косинус для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">к</span><span class="hljs-title function_">ос</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція тангенс для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">т</span><span class="hljs-title function_">ан</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція арксинус для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">а</span><span class="hljs-title function_">син</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція арккосинус для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">а</span><span class="hljs-title function_">кос</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція арктангенс для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">а</span><span class="hljs-title function_">тан</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; отримати абсолютне число</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">а</span><span class="hljs-title function_">бс</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція експонента для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">е</span><span class="hljs-title function_">ксп</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; функція квадратний корінь для числа</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">к</span><span class="hljs-title function_">ор2</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; округлити до стелі</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">с</span><span class="hljs-title function_">теля</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-comment">;; округлити до підлоги</span>
-<span class="hljs-keyword">дія</span> <span class="hljs-title function_">п</span><span class="hljs-title function_">ідлога</span>(значення)
-</code></div></pre>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> <span class="hljs-title function_">о</span><span class="hljs-title function_">круглити</span>(значення)
-</code></div></pre>
+<blockquote>
+<p>Текст у Мавці використовує <a href="./%D0%B4%D1%96%D1%94%D0%BA%D0%BE%D0%B4.html">Дієкод</a>.</p>
+</blockquote>
 
     
     <div class="XDocsPageContentBcFw">
-      <a data-is-prev="true" href="./друк.html">Відступ</a>
-      <a data-is-next="true" href="./бібліотека-файлова-система.html">Наступ</a >
+      <a data-is-prev="true" href="./створення-чисел.html">Відступ</a>
+      <a data-is-next="true" href="./створення-списків.html">Наступ</a >
     </div>
     
   </div>
