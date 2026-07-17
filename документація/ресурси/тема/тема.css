@@ -48,7 +48,9 @@
   --code-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -86,7 +88,8 @@ html.dark {
   --code-shadow: 0 0 0 1px #333;
 }
 
-html.dark img:not(.no-dark-shadow), html.dark svg:not(.no-dark-shadow) {
+html.dark img:not(.no-dark-shadow),
+html.dark svg:not(.no-dark-shadow) {
   filter: drop-shadow(0 0 1px white);
 }
 
@@ -105,7 +108,8 @@ body {
   overflow-x: hidden;
 }
 
-pre, code {
+pre,
+code {
   font-family: "Fira Code", monospace !important;
   font-weight: 500;
 }
@@ -114,12 +118,14 @@ a {
   color: rgb(var(--text-rgb));
 }
 
-subject, .XDocsTextSubject {
+subject,
+.XDocsTextSubject {
   color: #485cb0;
   font-weight: 500;
 }
 
-keyword, .XDocsTextKeyword {
+keyword,
+.XDocsTextKeyword {
   color: #c678dd;
   font-weight: 500;
 }
@@ -398,7 +404,11 @@ html.mobile .XDocsPage .XDocsPageContent {
   text-align: center;
   margin-bottom: var(--space-2xl);
 }
-.XDocsPage .XDocsPageContent h2, .XDocsPage .XDocsPageContent h3, .XDocsPage .XDocsPageContent h4, .XDocsPage .XDocsPageContent h5, .XDocsPage .XDocsPageContent h6 {
+.XDocsPage .XDocsPageContent h2,
+.XDocsPage .XDocsPageContent h3,
+.XDocsPage .XDocsPageContent h4,
+.XDocsPage .XDocsPageContent h5,
+.XDocsPage .XDocsPageContent h6 {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
 }
@@ -542,7 +552,8 @@ table {
   border-collapse: collapse;
   margin-bottom: var(--space-lg);
 }
-table th, table td {
+table th,
+table td {
   padding: var(--space-sm);
   border: 1px solid rgb(var(--border-rgb));
 }
