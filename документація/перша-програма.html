@@ -479,11 +479,16 @@
     
     <h1>Перша програма</h1>
 <p>Створіть файл <code>привіт.м</code>:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">дія</span> <span class="hljs-title function_">п</span><span class="hljs-title function_">ривітатись</span>()
-  <span class="hljs-title function_">д</span><span class="hljs-title function_">рук</span>(<span class="hljs-string">&quot;Вітання з моєї першої дії!&quot;</span>)
-<span class="hljs-keyword">кінець</span>
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">поки</span> <span class="hljs-literal">дійсне</span>
+  <span class="hljs-title function_">о</span><span class="hljs-title function_">новити_кнопки</span>() <span class="hljs-comment">;; оновити стан кнопок</span>
+  <span class="hljs-keyword">якщо</span> Кнопки.б.щойно_відпущено
+    <span class="hljs-keyword">перервати</span>
+  <span class="hljs-keyword">кінець</span>
 
-<span class="hljs-title function_">п</span><span class="hljs-title function_">ривітатись</span>()
+  Полотно.<span class="hljs-title function_">з</span><span class="hljs-title function_">аповнити</span>(Колір.ЧОРНИЙ)
+  Полотно.<span class="hljs-title function_">к</span><span class="hljs-title function_">руг</span>(Полотно.Ш/<span class="hljs-number">2</span>, Полотно.В/<span class="hljs-number">2</span>, <span class="hljs-number">20</span>, Колір.БІЛИЙ)
+  Полотно.<span class="hljs-title function_">в</span><span class="hljs-title function_">ідмалювати</span>() <span class="hljs-comment">;; запланувати відмалювання</span>
+<span class="hljs-keyword">кінець</span>
 </code></div></pre>
 <p>Запустіть, виконавши цю команду:</p>
 <pre><div class="XDocsCodeWrapper"><code class="hljs">мавка привіт.м
